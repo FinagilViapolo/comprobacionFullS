@@ -47,6 +47,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClaseHash">
+      <HintPath>..\..\compGastosFS\compGastosFS\bin\Debug\ClaseHash.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -72,13 +75,62 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmAltaDeUsuarios.Designer.vb">
+      <DependentUpon>frmAltaDeUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltaDeUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmAutorizadores.Designer.vb">
+      <DependentUpon>frmAutorizadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutorizadores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContratos.Designer.vb">
+      <DependentUpon>frmContratos.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarioTarjetas.Designer.vb">
+      <DependentUpon>frmInventarioTarjetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarioTarjetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedorTarjeta.Designer.vb">
+      <DependentUpon>frmProveedorTarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedorTarjeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTarjetas.Designer.vb">
+      <DependentUpon>frmTarjetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTarjetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoTarjeta.Designer.vb">
+      <DependentUpon>frmTipoTarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoTarjeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.vb">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiGastosFS.Designer.vb">
+      <DependentUpon>mdiGastosFS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mdiGastosFS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modVariables.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,8 +146,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProductionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="utilerias.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAltaDeUsuarios.resx">
+      <DependentUpon>frmAltaDeUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutorizadores.resx">
+      <DependentUpon>frmAutorizadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContratos.resx">
+      <DependentUpon>frmContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventariotarjetas.resx">
+      <DependentUpon>frmInventarioTarjetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedorTarjeta.resx">
+      <DependentUpon>frmProveedorTarjeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTarjetas.resx">
+      <DependentUpon>frmTarjetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoTarjeta.resx">
+      <DependentUpon>frmTipoTarjeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiGastosFS.resx">
+      <DependentUpon>mdiGastosFS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -114,6 +199,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="ProductionDataSet.xsc">
+      <DependentUpon>ProductionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionDataSet.xss">
+      <DependentUpon>ProductionDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
